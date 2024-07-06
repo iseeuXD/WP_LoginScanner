@@ -12,7 +12,7 @@ def check_credentials(line):
         site, credentials = parts
         username, password = credentials.split(":")
 
-        options = webdriver.ChromeOptions()
+        options = webdriver.ChromeOptions() #set ur webdriver path
         options.add_argument("--start-maximized")
 
         driver = webdriver.Chrome(options=options)
