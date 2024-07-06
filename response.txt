@@ -1,0 +1,3 @@
+https://site.com -> DENY
+https://site.com -> NULL
+https://site.com -> OK
