@@ -42,7 +42,7 @@ def check_credentials(line):
             driver.quit()
 
     else:
-        return f"Geçersiz giriş formatı: {line}"
+        return f"wrong format: {line}"
 
 def main():
     with open("credentials.txt", "r", encoding='utf-8') as file:
