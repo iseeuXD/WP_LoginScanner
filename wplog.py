@@ -12,7 +12,7 @@ def check_credentials(line):
         site, credentials = parts
         username, password = credentials.split(":")
 
-        options = webdriver.ChromeOptions() #set ur webdriver path
+        options = webdriver.ChromeOptions()  # set ur webdriver path (webdriver yolunu ayarla)
         options.add_argument("--start-maximized")
 
         driver = webdriver.Chrome(options=options)
@@ -31,7 +31,7 @@ def check_credentials(line):
 
             try:
                 wait.until(EC.url_contains("wp-admin"))
-                return "OK"
+                return f"OK: {username}:{password}"
             except TimeoutException:
                 return "DENY"
 
